@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#29263e" />
+
+    <title>Minecraft Server</title>
+    <meta name="title" content="Minecraft Server" />
+    <meta
+      name="description"
+      content="How to join the modded Minecraft server. NeoForge 1.21.1."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Minecraft Server" />
+    <meta
+      property="og:description"
+      content="How to join the modded Minecraft server. NeoForge 1.21.1."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <header class="heading">
+          <h1>Minecraft Server</h1>
+        </header>
+
+        <section class="server-card" aria-label="Server connection details">
+          <div class="server-row">
+            <span class="label">ADDRESS</span>
+            <button
+              class="copy-target"
+              data-copy="vanaj.pineserver.xyz"
+              aria-label="Copy server address"
+            >
+              <span class="mono">vanaj.pineserver.xyz</span>
+              <span class="copy-glyph" aria-hidden="true">copy</span>
+            </button>
+          </div>
+          <div class="server-row">
+            <span class="label">PORT</span>
+            <button
+              class="copy-target"
+              data-copy="25525"
+              aria-label="Copy port"
+            >
+              <span class="mono">25525</span>
+              <span class="copy-glyph" aria-hidden="true">copy</span>
+            </button>
+          </div>
+          <div class="server-row">
+            <span class="label">VERSION</span>
+            <span class="mono">Minecraft 1.21.1 / NeoForge 21.1.95</span>
+          </div>
+        </section>
+
+        <section class="intro">
+          <p>
+            The vanilla Minecraft launcher won't run modded servers. Follow the
+            steps below to install Prism Launcher, drop in the mod pack, and
+            connect.
+          </p>
+        </section>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-num"><span>01</span></div>
+            <div class="step-body">
+              <h2>Install Java 21</h2>
+              <p>
+                Required to run Minecraft 1.21.1. Skip if you already have it
+                (<span class="mono">java -version</span> shows
+                <span class="mono">21.x.x</span>).
+              </p>
+              <ul class="link-list">
+                <li>
+                  <a
+                    href="https://adoptium.net/temurin/releases/?version=21"
+                    target="_blank"
+                    rel="noopener"
+                    >Temurin 21 (recommended)</a
+                  >
+                  &mdash; pick your platform, run the installer.
+                </li>
+                <li>
+                  <span class="mono">brew install temurin@21</span> if you have
+                  Homebrew on macOS.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>02</span></div>
+            <div class="step-body">
+              <h2>Install Prism Launcher</h2>
+              <p>An open-source Minecraft launcher built for modded play.</p>
+              <ul class="link-list">
+                <li>
+                  <a
+                    href="https://prismlauncher.org/download/"
+                    target="_blank"
+                    rel="noopener"
+                    >Download Prism Launcher</a
+                  >
+                </li>
+                <li>
+                  On macOS:
+                  <span class="mono">brew install --cask prismlauncher</span>
+                  also works.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>03</span></div>
+            <div class="step-body">
+              <h2>First-time Prism setup</h2>
+              <ul class="link-list">
+                <li>Open Prism, accept defaults. It'll auto-detect Java 21.</li>
+                <li>
+                  Top right &rarr; <strong>Accounts</strong> &rarr;
+                  <strong>Add Microsoft</strong>, sign in with your Minecraft
+                  account.
+                </li>
+                <li>
+                  Top right &rarr; <strong>Settings</strong> (gear icon) &rarr;
+                  <strong>Java</strong> &rarr; set
+                  <strong>Maximum memory</strong> to
+                  <span class="mono">6144 MB</span> (6&nbsp;GB). Lower it if
+                  your machine has &lt;16&nbsp;GB RAM.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>04</span></div>
+            <div class="step-body">
+              <h2>Create the instance</h2>
+              <ul class="link-list">
+                <li>
+                  <strong>Add Instance</strong> (top left) &rarr;
+                  <strong>Custom</strong>.
+                </li>
+                <li>
+                  Name it anything &mdash; e.g.
+                  <span class="mono">Modded SMP</span>.
+                </li>
+                <li>Minecraft version: <span class="mono">1.21.1</span></li>
+                <li>
+                  <strong>Mod Loader</strong> tab &rarr;
+                  <strong>NeoForge</strong> &rarr; version
+                  <span class="mono">21.1.95</span> &rarr; OK.
+                </li>
+              </ul>
+              <p class="meta">
+                Prism downloads and installs NeoForge automatically &mdash; no
+                separate step needed.
+              </p>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>05</span></div>
+            <div class="step-body">
+              <h2>Download the mods</h2>
+              <p>
+                Grab the mod pack from Drive. Everything you need is in the
+                <span class="mono">mods/</span> folder.
+              </p>
+              <p>
+                <a
+                  class="button"
+                  href="https://drive.google.com/drive/folders/1Iprw6NcS4HBaHcbC-L34JeriQN9Rx7_N"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Open mods on Drive &rarr;
+                </a>
+              </p>
+              <p class="meta">
+                Download every <span class="mono">.jar</span> in
+                <span class="mono">mods/</span>. Optionally grab
+                <span class="mono">config/</span> and
+                <span class="mono">defaultconfigs/</span> too &mdash; they keep
+                mod settings consistent with the server.
+              </p>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>06</span></div>
+            <div class="step-body">
+              <h2>Drop the mods into Prism</h2>
+              <ul class="link-list">
+                <li>
+                  Right-click your instance &rarr;
+                  <strong>Folder</strong> &rarr; <strong>Mods Folder</strong>.
+                </li>
+                <li>
+                  Drag every <span class="mono">.jar</span> you downloaded into
+                  the folder that opens.
+                </li>
+                <li>
+                  If you grabbed the config folders too: right-click instance
+                  &rarr; <strong>Folder</strong> &rarr;
+                  <strong>Instance Folder</strong> &rarr; open
+                  <span class="mono">minecraft/</span> &rarr; drop in
+                  <span class="mono">config/</span> and
+                  <span class="mono">defaultconfigs/</span>.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-num"><span>07</span></div>
+            <div class="step-body">
+              <h2>Connect</h2>
+              <ul class="link-list">
+                <li>
+                  Hit <strong>Launch</strong>. First boot takes 1&ndash;3
+                  minutes.
+                </li>
+                <li>
+                  From the title screen: <strong>Multiplayer</strong> &rarr;
+                  <strong>Add Server</strong>.
+                </li>
+                <li>
+                  Server Address:
+                  <span class="mono">vanaj.pineserver.xyz:25525</span>
+                </li>
+                <li>Save, double-click the server, you're in.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <section class="troubleshooting">
+          <h2>Troubleshooting</h2>
+
+          <details>
+            <summary>"Not enough RAM available"</summary>
+            <p>
+              Prism is asking for more memory than your machine has free. Quit
+              memory-hungry apps, then check Activity Monitor / Task Manager for
+              free memory. If you only have 8&nbsp;GB total, lower the Max in
+              Prism &rarr; Java to <span class="mono">3072 MB</span>.
+            </p>
+          </details>
+
+          <details>
+            <summary>"Failed to download mod" / Drive download blocked</summary>
+            <p>
+              Google Drive rate-limits large folder downloads. Download files in
+              smaller batches, or wait a few hours and try again. As a last
+              resort, ask me for a direct mirror link.
+            </p>
+          </details>
+
+          <details>
+            <summary>"Failed to connect" / "Connection refused"</summary>
+            <p>
+              Server may be offline or restarting. Wait a minute and retry. If
+              it keeps failing, ping in the group chat.
+            </p>
+          </details>
+
+          <details>
+            <summary>Crash on launch / where are the logs?</summary>
+            <p>
+              Open Prism, right-click the instance &rarr; <strong>Logs</strong>.
+              Or find them at:
+            </p>
+            <ul class="link-list">
+              <li>
+                macOS:
+                <span class="mono"
+                  >~/Library/Application
+                  Support/PrismLauncher/instances/&lt;name&gt;/minecraft/logs/latest.log</span
+                >
+              </li>
+              <li>
+                Windows:
+                <span class="mono"
+                  >%APPDATA%\PrismLauncher\instances\&lt;name&gt;\minecraft\logs\latest.log</span
+                >
+              </li>
+            </ul>
+            <p>Send the last 50 lines to me.</p>
+          </details>
+        </section>
+
+        <footer>
+          <div class="pixel-icons">
+            <svg
+              class="pixel pixel-heart"
+              viewBox="0 0 8 8"
+              width="56"
+              height="56"
+              aria-hidden="true"
+              shape-rendering="crispEdges"
+            >
+              <rect x="1" y="1" width="2" height="1" fill="#b3261e" />
+              <rect x="5" y="1" width="2" height="1" fill="#b3261e" />
+              <rect x="0" y="2" width="1" height="2" fill="#b3261e" />
+              <rect x="7" y="2" width="1" height="2" fill="#b3261e" />
+              <rect x="3" y="2" width="2" height="1" fill="#b3261e" />
+              <rect x="1" y="4" width="1" height="1" fill="#b3261e" />
+              <rect x="6" y="4" width="1" height="1" fill="#b3261e" />
+              <rect x="2" y="5" width="1" height="1" fill="#b3261e" />
+              <rect x="5" y="5" width="1" height="1" fill="#b3261e" />
+              <rect x="3" y="6" width="2" height="1" fill="#b3261e" />
+              <rect x="1" y="2" width="2" height="2" fill="#ff5555" />
+              <rect x="5" y="2" width="2" height="2" fill="#ff5555" />
+              <rect x="1" y="3" width="6" height="1" fill="#ff5555" />
+              <rect x="1" y="4" width="6" height="1" fill="#ff5555" />
+              <rect x="0" y="4" width="1" height="1" fill="#ff5555" />
+              <rect x="7" y="4" width="1" height="1" fill="#ff5555" />
+              <rect x="2" y="5" width="4" height="1" fill="#ff5555" />
+              <rect x="3" y="6" width="2" height="1" fill="#ff5555" />
+              <rect x="1" y="2" width="1" height="1" fill="#ff8888" />
+              <rect x="2" y="3" width="1" height="1" fill="#ff8888" />
+            </svg>
+
+            <svg
+              class="pixel pixel-creeper"
+              viewBox="0 0 8 8"
+              width="64"
+              height="64"
+              aria-hidden="true"
+              shape-rendering="crispEdges"
+            >
+              <rect width="8" height="8" fill="#7ec850" />
+              <rect x="0" y="0" width="1" height="1" fill="#6cb242" />
+              <rect x="2" y="1" width="1" height="1" fill="#6cb242" />
+              <rect x="5" y="2" width="1" height="1" fill="#6cb242" />
+              <rect x="7" y="3" width="1" height="1" fill="#6cb242" />
+              <rect x="1" y="4" width="1" height="1" fill="#6cb242" />
+              <rect x="4" y="5" width="1" height="1" fill="#6cb242" />
+              <rect x="6" y="6" width="1" height="1" fill="#6cb242" />
+              <rect x="3" y="7" width="1" height="1" fill="#6cb242" />
+              <rect x="1" y="1" width="2" height="2" fill="#1d1d1d" />
+              <rect x="5" y="1" width="2" height="2" fill="#1d1d1d" />
+              <rect x="3" y="3" width="2" height="2" fill="#1d1d1d" />
+              <rect x="3" y="5" width="1" height="1" fill="#1d1d1d" />
+              <rect x="4" y="5" width="1" height="1" fill="#1d1d1d" />
+              <rect x="2" y="5" width="1" height="1" fill="#1d1d1d" />
+              <rect x="5" y="5" width="1" height="1" fill="#1d1d1d" />
+              <rect x="2" y="6" width="1" height="1" fill="#1d1d1d" />
+              <rect x="5" y="6" width="1" height="1" fill="#1d1d1d" />
+            </svg>
+
+            <svg
+              class="pixel pixel-diamond"
+              viewBox="0 0 8 8"
+              width="56"
+              height="56"
+              aria-hidden="true"
+              shape-rendering="crispEdges"
+            >
+              <rect x="2" y="0" width="4" height="1" fill="#1976d2" />
+              <rect x="1" y="1" width="1" height="1" fill="#1976d2" />
+              <rect x="6" y="1" width="1" height="1" fill="#1976d2" />
+              <rect x="0" y="2" width="1" height="4" fill="#1976d2" />
+              <rect x="7" y="2" width="1" height="4" fill="#1976d2" />
+              <rect x="1" y="6" width="1" height="1" fill="#1976d2" />
+              <rect x="6" y="6" width="1" height="1" fill="#1976d2" />
+              <rect x="2" y="7" width="4" height="1" fill="#1976d2" />
+              <rect x="2" y="1" width="4" height="1" fill="#5bc0de" />
+              <rect x="1" y="2" width="6" height="1" fill="#5bc0de" />
+              <rect x="1" y="5" width="6" height="1" fill="#5bc0de" />
+              <rect x="2" y="6" width="4" height="1" fill="#5bc0de" />
+              <rect x="1" y="3" width="6" height="2" fill="#b8dae6" />
+              <rect x="2" y="2" width="1" height="1" fill="#ffffff" />
+              <rect x="3" y="3" width="1" height="1" fill="#ffffff" />
+            </svg>
+
+            <svg
+              class="pixel pixel-sword"
+              viewBox="0 0 8 8"
+              width="56"
+              height="56"
+              aria-hidden="true"
+              shape-rendering="crispEdges"
+            >
+              <rect x="6" y="0" width="2" height="1" fill="#9aa4ad" />
+              <rect x="5" y="1" width="2" height="1" fill="#9aa4ad" />
+              <rect x="4" y="2" width="2" height="1" fill="#9aa4ad" />
+              <rect x="3" y="3" width="2" height="1" fill="#9aa4ad" />
+              <rect x="2" y="4" width="2" height="1" fill="#9aa4ad" />
+              <rect x="6" y="1" width="1" height="1" fill="#cbd5db" />
+              <rect x="5" y="2" width="1" height="1" fill="#cbd5db" />
+              <rect x="4" y="3" width="1" height="1" fill="#cbd5db" />
+              <rect x="3" y="4" width="1" height="1" fill="#cbd5db" />
+              <rect x="0" y="6" width="3" height="1" fill="#6a3a1a" />
+              <rect x="1" y="5" width="3" height="1" fill="#6a3a1a" />
+              <rect x="0" y="7" width="2" height="1" fill="#6a3a1a" />
+              <rect x="1" y="5" width="1" height="1" fill="#8b5a2b" />
+              <rect x="0" y="6" width="1" height="1" fill="#8b5a2b" />
+            </svg>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
+    <script src="copy.js"></script>
+  </body>
+</html>
