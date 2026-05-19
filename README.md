@@ -6,7 +6,7 @@ Static join-guide for the Minecraft server.
 
 - Address: `vanaj.pineserver.xyz`
 - Port: `25525`
-- Minecraft 1.21.1 / NeoForge 21.1.95
+- Minecraft 1.21.1 / NeoForge 21.1.230
 
 ## Preview
 
